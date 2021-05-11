@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
     load_and_authorize_resource
-
+    before_action :authorized, only:[:indexApi]
     # def create
     #     byebug
     #     ## ActiveModel::ForbiddenAttributesError
